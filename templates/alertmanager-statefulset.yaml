@@ -145,7 +145,7 @@ spec:
           resources:
             {{- toYaml .Values.alertmanager.resources | nindent 12 }}
           securityContext:
-            readOnlyRootFilesystem: true
+            readOnlyRootFilesystem: false
           env:
             {{- if .Values.alertmanager.env }}
               {{- toYaml .Values.alertmanager.env | nindent 12 }}
